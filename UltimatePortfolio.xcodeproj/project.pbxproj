@@ -68,7 +68,7 @@
 		B8D68EE927319E6A00FCE194 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		B8D68EEB2731A31600FCE194 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B8D68EED2732588000FCE194 /* UltimatePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimatePortfolio.entitlements; sourceTree = "<group>"; };
-		B8D68EEE2732589E00FCE194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8D68EEE2732589E00FCE194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8D68EF0273258FE00FCE194 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B8E55FF12734E64B00D4FA33 /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		B8E55FF32734F57C00D4FA33 /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
@@ -86,6 +86,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80278D0274F631300100360 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8E55FF12734E64B00D4FA33 /* Item-CoreDataHelpers.swift */,
+				B8E55FF32734F57C00D4FA33 /* Project-CoreDataHelpers.swift */,
+				B8D507662740DDBB0066BDDC /* Bundle-Decodable.swift */,
+				B8515E17273CFD9A00EDE6EA /* Sequence-Sorting.swift */,
+				B825DF9F27386181001E7D4F /* Binding-OnChange.swift */,
+				B88C70BE2742F088001737D1 /* Color-Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B80278D1274F632200100360 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B8B2560E27448DE400A5ADB0 /* Localizable.strings */,
+				B8B2561227448EBF00A5ADB0 /* Localizable.stringsdict */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		B80278D2274F633600100360 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B8D68EEE2732589E00FCE194 /* Info.plist */,
+				B8D68EE827319E6A00FCE194 /* Main.xcdatamodeld */,
+				B8D68EED2732588000FCE194 /* UltimatePortfolio.entitlements */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B80278D3274F661100100360 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				B80278D4274F662300100360 /* Home */,
+				B80278D5274F662B00100360 /* Projects */,
+				B80278D6274F663600100360 /* Awards */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		B80278D4274F662300100360 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B823EA0E2733A50E001EF317 /* HomeView.swift */,
+				B89C791727457B8700DEA605 /* ItemListView.swift */,
+				B89C791927457CE200DEA605 /* ProjectSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B80278D5274F662B00100360 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				B823EA102733A627001EF317 /* ProjectsView.swift */,
+				B8BBD5D0273E448B005C761A /* SelectSomethingView.swift */,
+				B825DFA12739064E001E7D4F /* ProjectHeaderView.swift */,
+				B81A83DB2737B4AA001C6582 /* ItemRowView.swift */,
+				B8D134942739A4D000ADBE24 /* EditProjectView.swift */,
+				B81A83D92737A1FF001C6582 /* EditItemView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		B80278D6274F663600100360 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				B8798C9A2742280D00EA0737 /* AwardsView.swift */,
+				B8798C98274226B000EA0737 /* Award.swift */,
+				B8B256162744907400A5ADB0 /* Awards.json */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
 		B8D68ECE27319CFC00FCE194 = {
 			isa = PBXGroup;
 			children = (
@@ -106,33 +181,14 @@
 		B8D68ED927319CFD00FCE194 /* UltimatePortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				B8D68EEE2732589E00FCE194 /* Info.plist */,
-				B8D68EED2732588000FCE194 /* UltimatePortfolio.entitlements */,
+				B80278D3274F661100100360 /* Activities */,
+				B80278D0274F631300100360 /* Extensions */,
+				B80278D1274F632200100360 /* Localization */,
+				B80278D2274F633600100360 /* Configuration */,
 				B8D68EDA27319CFD00FCE194 /* UltimatePortfolioApp.swift */,
-				B8D68EE827319E6A00FCE194 /* Main.xcdatamodeld */,
-				B8E55FF12734E64B00D4FA33 /* Item-CoreDataHelpers.swift */,
-				B8E55FF32734F57C00D4FA33 /* Project-CoreDataHelpers.swift */,
 				B8D68EEB2731A31600FCE194 /* DataController.swift */,
-				B823EA0E2733A50E001EF317 /* HomeView.swift */,
-				B89C791927457CE200DEA605 /* ProjectSummaryView.swift */,
-				B89C791727457B8700DEA605 /* ItemListView.swift */,
-				B8B2560E27448DE400A5ADB0 /* Localizable.strings */,
-				B8B2561227448EBF00A5ADB0 /* Localizable.stringsdict */,
-				B823EA102733A627001EF317 /* ProjectsView.swift */,
-				B8D507662740DDBB0066BDDC /* Bundle-Decodable.swift */,
-				B8BBD5D0273E448B005C761A /* SelectSomethingView.swift */,
-				B8515E17273CFD9A00EDE6EA /* Sequence-Sorting.swift */,
-				B88C70BE2742F088001737D1 /* Color-Additions.swift */,
-				B81A83DB2737B4AA001C6582 /* ItemRowView.swift */,
-				B825DFA12739064E001E7D4F /* ProjectHeaderView.swift */,
-				B8D134942739A4D000ADBE24 /* EditProjectView.swift */,
-				B825DFA3273910CB001E7D4F /* Colors.xcassets */,
 				B8D68EDC27319CFD00FCE194 /* ContentView.swift */,
-				B8798C98274226B000EA0737 /* Award.swift */,
-				B8798C9A2742280D00EA0737 /* AwardsView.swift */,
-				B81A83D92737A1FF001C6582 /* EditItemView.swift */,
-				B825DF9F27386181001E7D4F /* Binding-OnChange.swift */,
-				B8B256162744907400A5ADB0 /* Awards.json */,
+				B825DFA3273910CB001E7D4F /* Colors.xcassets */,
 				B8D68EDE27319D0000FCE194 /* Assets.xcassets */,
 				B8D68EE027319D0000FCE194 /* Preview Content */,
 			);
@@ -408,14 +464,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/Configuration/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = JS8UZP4T4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
+				INFOPLIST_FILE = UltimatePortfolio/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,14 +495,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/UltimatePortfolio.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UltimatePortfolio/Configuration/UltimatePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UltimatePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = JS8UZP4T4S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UltimatePortfolio/Info.plist;
+				INFOPLIST_FILE = UltimatePortfolio/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
