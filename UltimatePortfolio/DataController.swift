@@ -21,7 +21,7 @@ class DataController: ObservableObject {
     ///
     /// - Parameter inMemory: Whether to store this data in temporary memory or not.
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Main")
+        container = NSPersistentCloudKitContainer(name: "Main", managedObjectModel: Self.model)
         
         // For testing and previewing purpose, we create a tempoarary,
         // in-memory database by writing to dev/null so our data is
@@ -34,6 +34,13 @@ class DataController: ObservableObject {
             if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
+            
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+                self.deleteAll()
+                UIView.setAnimationsEnabled(false)
+            }
+            #endif
         }
     }
     
@@ -76,6 +83,18 @@ class DataController: ObservableObject {
         return dataController
     }()
     
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file.")
+        }
+        
+        guard let mangedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file.")
+        }
+        
+        return mangedObjectModel
+    }()
+    
     
     /// Saves our Core Data context iff there are changes. This silently ignores any 
     /// errors by saving, but this shoukd be fine because our attributes are optional.
@@ -111,7 +130,7 @@ class DataController: ObservableObject {
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
             
-        case "completed":
+        case "complete":
             // return true if they completed a certain number of items
             let fetchRequest: NSFetchRequest<Item> = NSFetchRequest(entityName: "Item")
             fetchRequest.predicate = NSPredicate(format: "completed = true")
