@@ -34,6 +34,10 @@ struct EditItemView: View {
         item.completed = completed
     }
     
+    func save() {
+        dataController.update(item)
+    }
+    
     var body: some View {
         Form {
             Section(header: Text("Basic settings")) {
@@ -55,7 +59,7 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
-        .onDisappear(perform: dataController.save)
+        .onDisappear(perform: save)
     }
 }
 
