@@ -8,9 +8,3 @@
     "Visit Asia", or for books it might be "Books by Agatha Christie".
 
 
-<img width="224" alt="Screen Shot 2021-12-28 at 2 22 30 PM" src="https://user-images.githubusercontent.com/42633200/147611368-c6577cac-6576-4751-a993-bef5b1d75c20.png">
-
-<img width="229" alt="Screen Shot 2021-12-28 at 2 23 02 PM" src="https://user-images.githubusercontent.com/42633200/147611394-9a0cee35-bff2-48ba-91cc-3112fb2ff608.png">
-
-<img width="229" alt="Screen Shot 2021-12-28 at 2 24 00 PM" src="https://user-images.githubusercontent.com/42633200/147611458-7375f1c6-6a2d-41a4-870b-aa34f427b38c.png">
-
